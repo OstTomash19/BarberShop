@@ -1,0 +1,1020 @@
+@color-text: rgb(255, 255, 255);
+@color-bg: rgba(0, 0, 0, 0.8);
+@color-smaller: rgb(19, 19, 24);
+@color-line: rgb(174, 137, 89);
+/*=====================================================*/
+.bg_style() {
+  background-image: url("../images/other/BG.png");
+  background-size: cover;
+}
+
+.flex_style() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex_style2() {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_style3() {
+  display: flex;
+  align-items: center;
+}
+
+.basic_style() {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mixed_style() {
+  .flex_style();
+  .basic_style();
+}
+
+.font_family_size18() {
+  font-size: 18px;
+  font-family: "Muller Regular", sans-serif;
+}
+
+.font_family_size16() {
+  font-size: 16px;
+  font-family: "Muller Regular", sans-serif;
+}
+
+.different_styles() {
+  font-family: "Lora-Regular", sans-serif;
+  color: @color-text;
+}
+
+.center_style() {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.popup_style() {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 9999999999;
+}
+
+/*======================================================*/
+//Fonts connections
+@font-face {
+  font-family: "Lora-Regular";
+  src: url("../fonts/Lora-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Muller Regular";
+  src: url("../fonts/Muller Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lora-Bold";
+  src: url("../fonts/Lora-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Muller Bold";
+  src: url("../fonts/Muller Bold.ttf");
+}
+
+@font-face {
+  font-family: "Castellar Regular";
+  src: url("../fonts/Castellar Regular.ttf");
+}
+
+//Basic
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+
+//======================================First block==============================================
+#general {
+  .bg_style();
+
+  #header {
+    background-color: rgba(0, 0, 0, 0.8);
+
+    #header-container {
+      .mixed_style();
+      box-sizing: border-box;
+      padding: 59px 15px 11px 15px;
+
+      #burger {
+        display: none;
+      }
+
+      #header-logo {
+        width: 135px;
+      }
+
+      #header-menu {
+        margin-left: 243px;
+        width: 356px;
+        .flex_style();
+
+        .header-menu-item {
+          .font_family_size16();
+          color: @color-text;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          box-sizing: border-box;
+          padding-bottom: 5px;
+
+          &:hover {
+            border-bottom: 1px solid #433727;
+          }
+        }
+      }
+
+      #header-call {
+        .flex_style();
+        width: 160px;
+        margin-left: 287px;
+      }
+    }
+  }
+
+  #main {
+    background-color: @color-bg;
+
+
+    #main-container {
+      .mixed_style();
+      position: relative;
+
+      #main-strong {
+        top: 96px;
+        left: 395px;
+        z-index: 1;
+      }
+
+      #main-club {
+        left: 80px;
+        bottom: 70px;
+      }
+
+      #main-info {
+        width: 510px;
+        padding-left: 128px;
+
+        #main-title {
+          margin: 0;
+          font-size: 40px;
+          .different_styles();
+          line-height: 1.2;
+        }
+
+        #main-descriptions {
+          padding-top: 39px;
+          font-size: 22px;
+          .different_styles();
+        }
+
+        #main-action {
+          margin-top: 49px;
+        }
+      }
+
+      #main-image {
+        z-index: 2;
+        display: flex;
+      }
+    }
+  }
+}
+
+//=====================================Section 1 between blocks==================================
+#section {
+  background-color: @color-smaller;
+
+  #section-container {
+    padding: 60px 15px;
+    .mixed_style();
+
+    .section-benefit {
+      .flex_style();
+
+      .benefit-description {
+        margin-left: 30px;
+        .font_family_size18();
+        color: @color-text;
+      }
+    }
+  }
+}
+
+//=====================================Second block============================================
+#feature {
+  .bg_style();
+
+  #feature-bg {
+    background-color: @color-bg;
+
+    #feature-container {
+      .basic_style();
+      padding: 100px 0;
+
+      #feature-line {
+        border-right: 1px solid @color-line;
+        box-sizing: border-box;
+
+        #feature-title {
+          font-size: 32px;
+          .different_styles();
+          line-height: 1.156;
+          .center_style();
+          width: 590px;
+        }
+
+        #feature-information {
+          .flex_style2();
+          align-items: flex-start;
+          padding: 100px 15px 0 15px;
+
+          #feature-propositions {
+            #feature-image {
+              width: 600px;
+
+              img {
+                width: 100%;
+                transition: all 0.5s ease-out;
+
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+            }
+
+            #feature-benefits {
+              margin-top: 47px;
+
+              .feature-benefit {
+                .flex_style3();
+                padding-top: 25px;
+
+                .feature-benefit-image {
+                  width: 31px;
+                  display: flex;
+                  justify-content: center;
+                }
+
+                .feature-benefit-description {
+                  .font_family_size18();
+                  color: @color-text;
+                  margin-left: 20px;
+                }
+              }
+            }
+          }
+
+          #feature-story {
+            width: 470px;
+
+            #feature-story-text {
+              .feature-story-article {
+                .font_family_size16();
+                color: @color-text;
+                line-height: 1.313;
+                margin-bottom: 35px;
+              }
+            }
+
+            #feature-story-image {
+              text-align: center;
+              max-width: 420px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//==============================Section 2 between blocks with Parallax==================================
+#action-instagram {
+  height: 100%;
+  background-image: url("../images/other/parralax1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  #action-instagram-block {
+    background-color: @color-bg;
+
+    #action-instagram-container {
+      .basic_style();
+      padding: 60px 15px;
+
+      #action-instagram-content {
+        .flex_style();
+        margin: 0 140px 0 100px;
+
+        #action-instagram-text {
+          font-size: 28px;
+          .different_styles();
+          line-height: 1.2;
+          width: 425px;
+
+          & span {
+            font-family: "Lora-Bold", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+//===============================Third block ==========================================================
+#services {
+  .bg_style();
+
+  #services-bg {
+    background-color: @color-bg;
+
+    #services-container {
+      .basic_style();
+      padding: 100px 0;
+      position: relative;
+
+      #services-scissors-image {
+        position: absolute;
+        top: 190px;
+        left: 280px;
+      }
+
+      #services-line {
+        border-left: 1px solid @color-line;
+        box-sizing: border-box;
+
+        #services-content {
+          padding: 0 15px;
+          border-top: 1px solid transparent;
+          box-sizing: border-box;
+
+          #services-content-title {
+            font-size: 32px;
+            .different_styles();
+            text-align: center;
+          }
+
+          #services-content-price {
+            padding: 10px 37px 0 82px;
+            .flex_style2();
+
+            #service-content-price-left,
+            #service-content-price-right {
+              max-width: 390px;
+
+              .service-content-price-title {
+                font-size: 25px;
+                font-family: "Lora-Regular", sans-serif;
+                color: @color-line;
+                margin-top: 50px;
+
+                &:nth-child(3) {
+                  margin-top: 44px;
+                }
+              }
+
+              .service-content-price-container {
+                max-width: 370px;
+
+                .service-content-price-items {
+                  .flex_style2();
+                  margin-top: 41px;
+
+                  .service-content-price-item {
+                    width: 280px;
+
+                    .service-content-price-item-main {
+                      .font_family_size18();
+                      color: @color-text;
+                    }
+
+                    .service-content-price-item-secondary {
+                      width: 238px;
+                      padding-top: 10px;
+                      font-size: 14px;
+                      font-family: "Muller Regular", sans-serif;
+                      color: rgb(89, 85, 80);
+                    }
+                  }
+
+                  .service-content-price {
+                    width: 90px;
+                    .font_family_size18();
+                    color: @color-text;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//===============================Popup about discount======================================================
+#popup {
+  .popup_style();
+
+  #popup-discount {
+    display: block;
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    background-color: @color-smaller;
+    bottom: 50%;
+    left: 50%;
+    margin-bottom: -150px;
+    margin-left: -300px;
+    border-radius: 50px;
+    border: 1px solid rgb(152, 108, 52);
+    box-sizing: border-box;
+    z-index: 9;
+
+    #popup-discount-container {
+      margin: 0 auto;
+
+      #popup-discount-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+      }
+
+      #popup-discount-text {
+        font-size: 25px;
+        .different_styles();
+        line-height: 1.2;
+        width: 600px;
+        .center_style();
+        padding-top: 110px;
+      }
+    }
+  }
+}
+
+//===============================Section 3 between blocks with Parallax====================================
+#discount {
+  background-image: url("../images/other/parralax1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  #discount-block {
+    background-color: @color-bg;
+
+    #discount-container {
+      .mixed_style();
+      padding: 60px 264px 60px 175px;
+
+      #discount-text {
+        font-size: 28px;
+        .different_styles();
+        line-height: 1.2;
+        width: 307px;
+
+        & span {
+          color: rgb(146, 114, 75);
+          font-family: "Lora-Bold", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+//=============================Fourth Block with Carousel=============================================
+#masters {
+  .bg_style();
+
+  #masters-bg {
+    background-color: @color-bg;
+
+    #masters-container {
+      .basic_style();
+      padding: 100px 0;
+
+      #masters-line {
+        border-right: 1px solid @color-line;
+        box-sizing: border-box;
+
+        #masters-title {
+          font-size: 32px;
+          .different_styles();
+          text-align: center;
+        }
+
+        #masters-text {
+          .font_family_size18();
+          color: @color-text;
+          line-height: 1.389;
+          .center_style();
+          width: 810px;
+          padding-top: 60px;
+        }
+
+        .masters-carousel {
+          max-width: 1095px;
+          margin: 0 auto;
+          position: relative;
+          outline: none;
+          padding: 30px 0;
+
+          .masters-carousel-item {
+            overflow: hidden;
+            margin: 28px 10px 40px 10px;
+            outline: none;
+            transition: all .5s ease;
+
+            .master {
+              height: 404px;
+              width: 292px;
+              position: relative;
+
+              & img {
+                max-width: 120%;
+                height: 100%;
+                filter: grayscale(100%);
+              }
+
+              & img:hover {
+                filter: none;
+              }
+
+              .master-info {
+                width: 120%;
+                text-align: center;
+                background-color: @color-bg;
+                position: absolute;
+                top: 276px;
+                left: 0;
+                flex-direction: column;
+                .flex_style3();
+
+                .master-info-name {
+                  font-size: 20px;
+                  .different_styles();
+                  margin-top: 20px;
+                }
+
+                & button {
+                  margin: 20px 0;
+                  font-size: 16px;
+                  font-family: "Muller Bold", sans-serif;
+                  color: @color-text;
+                  padding: 14px 39px;
+                  width: 165px;
+                  border: 1px solid @color-line;
+                  background-color: transparent;
+                  outline: none;
+                  cursor: pointer;
+                }
+
+                button:hover {
+                  background-color: @color-line;
+                }
+              }
+            }
+          }
+          .masters-carousel-item:hover {
+            transform: scale(1.2);
+
+          }
+
+          .slick-dots {
+            bottom: -28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 13%;
+            left: 44%;
+
+            & li {
+              width: 25px;
+              height: 25px;
+              background-color: transparent;
+              border: 1px solid @color-line;
+              box-sizing: border-box;
+              margin: 0 10px;
+
+              & button {
+                margin: 16% 19%;
+              }
+            }
+
+            .slick-active {
+              width: 30px;
+              height: 30px;
+
+              & button:before {
+                content: url("../images/carousel/square.png");
+                opacity: 1;
+                width: 0;
+                height: 0;
+                line-height: 0;
+                top: calc(50% - 8px);
+                left: calc(50% - 8px);
+              }
+            }
+          }
+        }
+
+        .slick-prev,
+        .slick-next,
+        .slick-prev:before,
+        .slick-next:before {
+          position: absolute;
+          bottom: -286px;
+        }
+
+        .slick-prev,
+        .slick-prev:before {
+          content: url("../images/carousel/prev.png");
+          left: 221px;
+        }
+
+        .slick-next,
+        .slick-next:before {
+          content: url("../images/carousel/next.png");
+          right: 221px;
+        }
+
+        //.master-carousel-dots {
+        //  width: 140px;
+        //  box-sizing: border-box;
+        //  margin: 0 auto;
+        //
+        //  & ul {
+        //    margin: 0;
+        //    width: 100%;
+        //    .flex_style();
+        //    padding: 0;
+        //    list-style-type: none;
+        //
+        //    & li {
+        //      width: 25px;
+        //      height: 25px;
+        //      background-color: transparent;
+        //      border: 1px solid @color-line;
+        //      .flex_style();
+        //      justify-content: center;
+        //      margin: 0 10px;
+        //    }
+        //  }
+        //}
+        #make-order-popup {
+          .popup_style();
+
+          #make-order {
+            display: block;
+            background-image: url('../images/other/parralax1.png');
+            background-size: cover;
+            background-position: center;
+            width: 1004px;
+            margin: 40px auto 0 auto;
+            z-index: 99;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-top: -250px;
+            margin-left: -502px;
+
+            #make-order-container {
+              background-color: @color-bg;
+              height: 100%;
+              width: 100%;
+              position: relative;
+
+              #make-order-close {
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                cursor: pointer;
+              }
+
+              #make-order-form {
+
+                #make-order-title {
+                  font-size: 25px;
+                  .different_styles();
+                  line-height: 1.2;
+                  width: 295px;
+                  .center_style();
+                  padding-top: 60px;
+                }
+
+                #send-form {
+                  max-width: 810px;
+                  .center_style();
+                  padding: 20px 0 60px 0;
+
+                  #form-container {
+                    flex-wrap: wrap;
+                    .flex_style2();
+
+
+                    .input-wrapper {
+                      height: 48px;
+                      box-sizing: border-box;
+                      margin-top: 40px;
+                      display: flex;
+                      flex-direction: column;
+
+                      .error-input {
+                        color: red;
+                        .font_family_size16();
+                        display: none;
+                        padding-top: 5px;
+                        text-align: left;
+                      }
+
+                      input {
+                        background-color: transparent;
+                        border: 1px solid @color-line;
+                        .font_family_size16();
+                        outline: none;
+                        width: 225px;
+                        padding: 17px 15px 13px 15px;
+                        box-sizing: border-box;
+                        color: @color-text;
+
+                        &::placeholder {
+                          color: @color-text;
+                          font-family: "Muller Regular", sans-serif;
+                        }
+                      }
+
+                      select {
+                        background-color: transparent;
+                        border: 1px solid @color-line;
+                        .font_family_size16();
+                        color: @color-text;
+                        outline: none;
+                        width: 225px;
+                        padding: 17px 15px 13px 15px;
+                        box-sizing: border-box;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        background: url("../images/icons/arrow.png") no-repeat 188px center;
+
+                        option {
+                          background-color: @color-smaller;
+                        }
+                      }
+                    }
+                  }
+
+                  .btn {
+                    margin-top: 60px;
+                    outline: none;
+                  }
+                }
+              }
+
+              #make-order-form-done {
+                display: none;
+
+                #make-order-form-done-title {
+                  font-size: 25px;
+                  .different_styles();
+                  line-height: 1.2;
+                  text-align: center;
+                  padding-top: 61px;
+                }
+
+                #make-order-form-done-information {
+                  .font_family_size18();
+                  color: @color-text;
+                  line-height: 1.389;
+                  .center_style();
+                  width: 362px;
+                  padding-top: 79px;
+                  padding-bottom: 249px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//====================================Footer with Google map========================================
+#footer {
+  background-color: @color-smaller;
+
+  #footer-container {
+    .basic_style();
+
+    #footer-info-map {
+      .flex_style();
+      padding: 60px 15px 100px 15px;
+
+      #footer-info {
+        max-width: 200px;
+        flex-direction: column;
+        .flex_style3();
+
+        #footer-logo {
+          text-align: center;
+          margin-bottom: 70px;
+        }
+
+        #footer-info-options {
+          .information {
+            margin-bottom: 40px;
+
+            .information-icons {
+              padding-top: 19px;
+              margin: 0 auto;
+              max-width: 128px;
+              .flex_style();
+
+              a {
+                text-decoration: none;
+
+                img:hover {
+                  opacity: 0.9;
+                }
+              }
+            }
+          }
+        }
+
+        #footer-info-connection {
+          flex-direction: column;
+          .flex_style3();
+          margin-top: 20px;
+
+          .information:last-child {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+
+    #footer-map {
+      iframe {
+        width: 862px;
+      }
+    }
+
+    #footer-laws {
+      .flex_style();
+      padding-bottom: 60px;
+
+      .laws {
+        font-size: 14px;
+        font-family: "Muller Regular", sans-serif;
+        color: rgb(80, 79, 79);
+      }
+    }
+  }
+}
+
+//======================================General Styles=====================================//
+
+/*=================Loader====================*/
+#loader {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: @color-line;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+.dots-square {
+  width: 16px;
+  height: 16px;
+  background-color: @color-line;
+  display: inline-block;
+}
+
+.information {
+  .font_family_size16();
+  color: @color-text;
+  text-align: center;
+}
+
+//.active-dot {
+//  width: 30px;
+//  height: 30px;
+//  background-color: #ae8959;
+//  border: 1px solid #ae8959;
+//  padding: 7px;
+//  box-sizing: border-box;
+//}
+
+.number {
+  font-size: 15px;
+  font-family: "Muller Regular", sans-serif;
+  color: @color-text;
+}
+
+//.active {
+//  border-bottom: 1px solid #433727;
+//}
+
+.logo {
+  font-size: 25px;
+  .different_styles();
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 23px 33px;
+  font-size: 18px;
+  font-family: "Muller Bold", sans-serif;
+  color: @color-text;
+  outline: none;
+  border: none;
+  background-color: @color-line;
+  box-shadow: 0 0 18.75px 6.25px rgba(152, 108, 52, 0.2);
+  width: 232px;
+  cursor: pointer;
+}
+
+.bg-text {
+  font-size: 180px;
+  font-family: "Castellar Regular", sans-serif;
+  color: rgba(174, 137, 89, 0.051);
+  line-height: 0.111;
+  position: absolute;
+}
+
+/*==========Чтобы елементы появлялись только с анимацыей*/
+.wow {
+  visibility: hidden;
+}
+
+@import "adaptive";
